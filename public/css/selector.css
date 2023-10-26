@@ -1,0 +1,60 @@
+html {
+  max-width: 720px;
+}
+
+body {
+  background: #fff;
+}
+
+.card-dark {
+background: #dfdfdf;
+}
+.item,
+.Item {
+  color: green;
+}
+
+.item:first-child {
+  color: crimson;
+}
+.item:last-child {
+  color:rgb(223, 29, 184); 
+}
+/* Если вместо FIRST написать last все будет наоборот */
+.Item:first-of-type  {
+  color:rgb(223, 29, 184); 
+}
+.Item:only-of-type  {
+  color:rgb(140, 0, 255); 
+}
+.input-dark {
+  background: #c0c0c0;
+  }
+.input-dark[required] {
+  background: #ff0000;
+}
+.input-dark[type='number'] {
+  background: #04f2ff;
+}
+
+#test:target {
+  color:red;
+}
+.link:link {
+  color:green;
+}
+
+.active:active {
+  background-color: #04f2ff;
+}
+
+input {
+  background-color: gray;
+}
+
+input:focus {
+  background-color: red;
+}
+ .focus:focus-within {
+  background-color: fuchsia;
+ }
