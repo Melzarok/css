@@ -39,7 +39,7 @@ router.get('/template-1', function (req, res) {
     layout: 'template-1',
 
     page: {
-      title: 'Example Page',
+      title: 'Template 1 page',
     },
     header: [
       {

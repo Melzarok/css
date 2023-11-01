@@ -1,27 +1,48 @@
-<main class='p-5'>
-  <div class='card p-5'>
-    <h1>
-      Hello word!
-    </h1>
-    <h2>
-      Hello word!
-    </h2>
-    <p>Hello word!</p>
-    <p class='dashed'>Hello word!</p>
-    <p class='wavy'>Hello word!</p>
-    <p class='over-line p-r'>Hello word!</p>
-    <p class='line-trough p-r solid'>Hello word!</p>
-    <p class='double solid p-r'>Hello word!</p>
-    <span class='inv'>Test</span>
+<div class='page'>
+  <div class='page_content'>
+    <div class='page_block'>
+      <header class='header row g-0'>
+        <div class='col-3'>
+          {{>logo}}
+        </div>
 
-    <div style='background: gray ;'>
-      <span class='block'>Block</span>
-      <span>INline-block</span>
-      <span
-        class='in-block'
-        style='margin: 10px 40px 100px 200px;'
-      >Inline-block</span>
+        <nav class='header_nav col-9'>
+          <div class='header_nav_right'>
+            {{>nav list=header}}
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class='page_block'>
+{{>hero title=hero.title text=hero.text}}
+    </div>
+
+    <div class='page_block'>
+      <main class='row g-0 plans'>
+        {{#each plans}}
+          <div class='col plans_card'>
+            {{>card data=this}}
+          </div>
+        {{/each}}
+      </main>
+    </div>
+
+    <div class='page_block'>
+      <footer class='row'>
+        <div class='col-3'>
+          {{>logo}}
+          <span class='footer_copyright'>Copyright 2023-2024</span>
+        </div>
+
+        {{#each footer}}
+          <div class='col-3'>
+            <span class='footer_title'>{{title}}</span>
+            {{>nav list=links isVertical=true}}
+          </div>
+        {{/each}}
+      </footer>
     </div>
 
   </div>
-</main>
+</div>
