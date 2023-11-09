@@ -87,6 +87,7 @@ footer {
     text-align: center;
     max-width: 585px;
     margin: 0 auto;
+    line-height: 130%;
 }
 
 .plans_card:not(:last-of-type) {
@@ -118,8 +119,9 @@ footer {
 }
 
 .card_price_duration {
-    font-size: 29px;
+    font-size: 16px;
     color: #6C757D;
+    vertical-align: 15px;
 }
 
 .card_item {
@@ -132,4 +134,18 @@ footer {
     width: 100%;
     font-size:19px;
     padding: 9px;
+}
+
+h1,
+.card_price_amount {
+    text-shadow: 2px 2px 2px rgba(0, 0, 255, 0.785);
+}
+
+.card:hover {
+    box-shadow: 5px 5px 9px 1px rgba(0, 0, 255, 0.502);
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 5px 5px 4px 1px rgba(136, 136, 136, 0.808);
 }
