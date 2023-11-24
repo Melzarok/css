@@ -1,15 +1,21 @@
+:root {
+    --text-color: #212529;
+}
+
 .page {
     background: #FFFFFF;
     padding: 0.15px;
+
 }
+
 
 .page_content {
     max-width: 960px;
     margin: 0 auto;
 }
 .header {
-padding: 24px;
-border-bottom: 2px solid #DEE2E6;
+    padding: 24px;
+    border-bottom: 2px solid #DEE2E6;
 }
 .header_logo {
     font-size: 17px;
@@ -29,9 +35,7 @@ text-decoration: none;
 }
 
 .nav_link:hover {
-    text-decoration: underline;
-    color:  blueviolet;
-    font-size: 16.3px;
+    opacity: 50%;
 }
 
 
@@ -69,14 +73,14 @@ footer {
 
 .footer_title {
     font-size: 20px;
-    color: #212529;
+    color: var(--text-color, #212529);
     display: block;
     margin-bottom:12px ;
 }
 
 .hero_title{
     font-size: 56px;
-    color: #212529;
+    color: var(--text-color, #212529);
     font-weight: 500;
     margin-bottom: 12px;
     text-align: center;
@@ -88,6 +92,12 @@ footer {
     max-width: 585px;
     margin: 0 auto;
     line-height: 130%;
+    background-color: #047ff9;
+    border-image-source: url("/img/test.png");
+    border-image-width: 10% 5%;
+    border-image-slice: 10%;
+    padding: 50px ;
+    border-image-outset: 40px;
 }
 
 .plans_card:not(:last-of-type) {
@@ -108,6 +118,8 @@ footer {
 .card_block {
     text-align: center;
     margin-bottom: 24px;
+    list-style-type: circle;
+    list-style-position: inside;
 }
 
 .card_block:not(:last-of-type) {
@@ -126,7 +138,7 @@ footer {
 
 .card_item {
     font-size: 16px;
-    display: block;
+    display: list-item;
 }
 
 .card_button {
@@ -148,4 +160,37 @@ h1,
 
 .btn:hover {
     box-shadow: 5px 5px 4px 1px rgba(136, 136, 136, 0.808);
+}
+
+.table tr td {
+    border: 1px solid var(--text-color, #212529);
+    border-bottom-color: red;
+    border-right-color:blue ;
+}
+.table {
+    table-layout: auto;
+    width: 200px;
+
+    border-collapse: separate;
+    border-spacing: 10px 30px;
+
+    caption-side: top;
+    empty-cells: hide;
+}
+
+.nav_link::after, .nav_link::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+
+    background-image:url("/img/test.png") ;
+}
+
+.nav_link::before {
+    margin-right: 10px;
+}
+
+.nav_link::after {
+    margin-left: 10px;
 }
