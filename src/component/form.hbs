@@ -1,0 +1,32 @@
+<form class='form'>
+  <h2 class='form-title'>{{title}}</h2>
+
+  <div class='form-input-list'>
+    {{#each inputs}}
+      <input
+        type='{{type}}'
+        placeholder='{{placeholder}}'
+        class='form-input'
+        name='{{name}}'
+        id='form-input-1'
+      />
+    {{/each}}
+  </div>
+
+  <div class='form-checkbox'>
+    <input
+      type='checkbox'
+      name='{{checkbox.name}}'
+      id='{{checkbox.name}}'
+    />
+    <label
+      for='{{checkbox.name}}'
+    >{{checkbox.label}}</label>
+  </div>
+
+  <button
+    type='submit'
+    class='form-button'
+  >{{button}}</button>
+  <p class='form-info-{{id}}'>{{info}}</p>
+</form>
