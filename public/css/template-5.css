@@ -135,6 +135,7 @@ strong {
 .messages {
   /* width: 100%;
   max-width: 620px; */
+  height: min-content;
 
   background-color: var(--color-white);
   border-radius: var(--boreder-radius-d);
@@ -204,12 +205,14 @@ strong {
   padding-right: var(--space-b);
 }
 
-.advantages {
+.advantages,
+.advantage {
   display: flex;
   gap: var(--space-l);
 }
 
-.advantages > div {
+.advantages > div,
+.advantage {
   display: flex;
   flex-direction: column;
 
@@ -220,12 +223,14 @@ strong {
   width: 100%;
 }
 
-.advatnages > div > strong {
+.advatnages > div > strong,
+.advantage > strong {
   font-size: 18px;
   font-weight: var(--weight-title);
 }
 
-.advantages > div > p {
+.advantages > div > p,
+.advantage > p {
   color: #767676;
   font-size: var(--size-d);
   line-height: 150%;
@@ -234,6 +239,7 @@ strong {
 .form {
   /* width: 100%;
   max-width: 340px; */
+  height: min-content;
 
   background-color: var(--color-white);
   border-radius: var(--boreder-radius-d);
@@ -304,11 +310,12 @@ strong {
 .advantages {
   display: grid;
 
-  grid-template-columns: repeat(
+  /* grid-template-columns: repeat(
     auto-fit,
-    minmax(200px, 1fr)
-  );
-  grid-template-rows: 1fr;
+    minmax(300px, 1fr)
+  ); */
+  grid-template-rows: repeat(3, 300px);
+  grid-template-columns: repeat(3, 300px);
 }
 
 .main {
@@ -316,17 +323,30 @@ strong {
 
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: 'messages messages form' 'messages messages form' 'advantages advantages advantages';
+  /* grid-template-areas: 'messages messages form' 'advantages advantages advantages'; */
 }
 
 .messages {
-  grid-area: messages;
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 
 .form {
-  grid-area: form;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
 }
 
 .advantages {
-  grid-area: advantages;
+  grid-row: 3 / 4;
 }
+
+.footer {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* .footer > div:first-of-type {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+} */

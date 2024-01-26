@@ -13,6 +13,7 @@
 </header>
    
 {{#with hero}}
+  <div class="hero-cont">
     <div class="hero">
       <div class="hero-content">
         <h1 class="hero-title">{{title}}</h1>
@@ -23,16 +24,15 @@
          <img src="{{photo}}" alt="hero img" class="hero-img"></img>
          <div class="hero-slider-icon hero-slider-r">{{right}}</div>
       </div>
-     
     </div>
+  </div>
 {{/with}}
 
-<div class="model">
+{{!-- <div class="model">
   {{hero.text}} {{hero.text}}
-  {{!-- <img src="{{hero.photo}}" alt="hero img" class="model-img"></img> --}}
+  <img src="{{hero.photo}}" alt="hero img" class="model-img"></img>
   <div class="model-text">{{hero.text}} {{hero.text}}</div>
-
-</div>
+</div> --}}
 
   <main class="blog">
     {{#each blog}}

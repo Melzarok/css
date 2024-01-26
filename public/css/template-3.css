@@ -1,3 +1,25 @@
+@import '/css/var.css';
+
+@font-face {
+  font-family: 'Segment';
+  src: url('/font/Segment-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Segment';
+  src: url('/font/Segment-SemiBold.otf');
+  font-weight: 400;
+}
+
+@layer normalize, main, component, style;
+
+@layer style {
+  .card-button {
+    background-color: red;
+  }
+}
+
 @keyframes fly {
   from {
     top: 0;
@@ -32,29 +54,6 @@
   }
 }
 
-:root {
-  --space-m: 12px;
-  --space-xm: 16px;
-  --space-l: 24px;
-  --space-b: 36px;
-
-  --size-s: 14px;
-  --size-d: 16px;
-  --size-l: 20px;
-
-  --color-border: #dee2e6;
-  --color-primary: rgb(46, 46, 255);
-  --color-white: #fff;
-  --color-text: #343a40;
-
-  --border-radius: 12px;
-
-  --weight-title: 500;
-  --weight-text: 400;
-
-  --page-width: 960px;
-}
-
 /* ============================================== */
 
 .page {
@@ -62,6 +61,7 @@
   padding: 0 15px;
   display: flex;
   justify-content: center;
+  font-family: 'Segment';
 }
 
 .page_content {
@@ -184,7 +184,8 @@
 }
 
 .blog {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-l);
   padding: var(--space-b);
   border-bottom: 1px solid var(--color-border);
@@ -214,26 +215,30 @@
   font-size: var(--sizel-d);
   color: var(-color-text);
 }
+@layer main {
+  .button {
+    display: inline-block;
+    font-size: var(--size-d);
+    text-decoration: none;
+    padding: var(--space-m) var(--space-xm);
+    border-radius: var(--border-radius);
 
-.button {
-  display: inline-block;
-  font-size: var(--size-d);
-  text-decoration: none;
-  padding: var(--space-m) var(--space-xm);
-  border-radius: var(--border-radius);
+    transition-property: opacity, background-color, color;
+    transition-duration: 0.5s;
+  }
 
-  transition-property: opacity, background-color, color;
-  transition-duration: 0.5s;
+  .button:hover {
+    opacity: 0.7;
+    background-color: yellow;
+    color: red;
+  }
 }
-.card-button {
-  color: var(--color-white);
-  background-color: var(--color-primary);
-}
 
-.button:hover {
-  opacity: 0.7;
-  background-color: yellow;
-  color: red;
+@layer component {
+  .card-button {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
 }
 
 .form {
@@ -243,6 +248,13 @@
   background-color: var(--color-primary);
   padding: var(--space-l);
   border-radius: var(--border-radius);
+  gap: var(--space-l);
+}
+
+.form-action {
+  max-width: 160px;
+  width: 100%;
+  text-align: center;
 }
 .form-content {
   display: flex;
@@ -358,4 +370,50 @@ body:hover .model {
 
 .model-text {
   clear: left;
+}
+
+@media all and (width <= 600px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (600px < width <= 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (width <= 560px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .form-info {
+    max-width: 300px;
+    width: 100%;
+    line-height: 150%;
+  }
+
+  .form-content {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.hero-cont {
+  container-type: inline-size;
+  container-name: hero;
+}
+
+@container hero (width < 900px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+
+.hero-title {
+  font-size: 5cqw;
 }
