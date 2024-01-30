@@ -48,25 +48,29 @@
     <h1 class="articles-title">Our Article</h1>
     <a href="#" class="articles-heading-button">View All</a>
   </div>
-  {{#each articles}}
-    <div id="{{id}}" class="articles-card">
-      <img src="{{photo}}" alt="article">
-      <h2 class="article-card-title">{{name}}</h2>
-      <p class="article-card-description">{{description}}</p>
-      <a href="#" class="article-card-button">Read All</a>
-    </div>
-  {{/each}}
+  <div class="article-card-cont">
+    {{#each articles}}
+      <div id="{{id}}" class="articles-card">
+        <img src="{{photo}}" alt="article" class="article-card-img">
+        <h2 class="article-card-title">{{name}}</h2>
+        <p class="article-card-description">{{description}}</p>
+        <a href="#" class="article-card-button">Read All</a>
+      </div>
+    {{/each}}
+  </div>
 </div>
 
 <footer class="footer">
-  <div>
-    <span class='footer_copyright'>Copyright 2023-2024</span>
-  </div>
-
-  {{#each footer}}
-    <div>
-      <span class='footer_title'>{{title}}</span>
-      {{> nav list=links isVertical=true}}
-    </div>
-  {{/each}}
+  {{#with footer}}
+   <div class="footer-pages">
+    {{#each pages}}
+      <div>
+        <a href="{{path}}" class='footer_title'>{{name}}</a>
+      </div>
+    {{/each}}
+   </div>
+      <div>
+        <span class='footer_copyright'>{{copyright}}</span>
+      </div>
+  {{/with}}
 </footer>
