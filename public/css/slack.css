@@ -70,7 +70,7 @@
 
   .icon_arrow {
     height: 14px;
-    width: 24px;
+    width: var(--spacing-5);
     background-image: url('/svg/arrow-right.svg');
   }
 }
@@ -349,6 +349,7 @@ body {
 
   .about_card_cont {
     display: flex;
+    flex-direction: row;
     gap: 75px;
     justify-content: center;
   }
@@ -357,7 +358,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: var(--space-xm);
+    gap: var(--spacing-1);
     width: min-content;
     height: 100%;
 
@@ -371,22 +372,25 @@ body {
   .about_card_title {
     color: #454245;
     font-size: var(--size-1);
-    margin-bottom: 8px;
-
     padding-left: 12px;
   }
 
   .about_card_description {
     height: 100%;
-    padding-left: 12px;
+    padding: 12px;
+    padding-top: 0;
+    padding-bottom: var(--spacing-4);
   }
 
   .about_card_link_cont {
     display: flex;
     justify-content: space-between;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 12px;
+    padding: 12px;
+  }
+
+  .about_card_link {
+    color: #1264a3;
+    text-decoration: none;
   }
 }
 
