@@ -28,7 +28,7 @@
 
   <div class="page page--dashboard">
     <aside class="page__aside aside vertical">
-      <div class="aide__logo">
+      <div class="aside__logo text">
         Sidebar
       </div>
       <nav class="vertical vertical--small">
@@ -48,8 +48,275 @@
         </a>
       </nav>
     </aside>
-    <header class="header">test</header>
-    <main class="main">test</main>
+    <header class="header">
+      <div class="layout header__content text--small">
+        <div class="header__search relative">
+          <input type="text" class="field field--header text" placeholder="Search">
+          <span class="icon header__icon-search" style="background-image: url('/svg/header/search.svg')"></span>
+          <span class="icon header__icon-settings icon--button icon--colot-blue click"
+            style="background-image: url('/svg/header/settings.svg')"></span>
+        </div>
+
+        <div class="layout__icon">
+          <span class="icon layout--icon icon--button icon--color-yellow click"
+            style="background-image: url('/svg/header/antenna.svg')"></span>
+          <span class="icon layout--icon icon--button icon--color-blue-light click"
+            style="background-image: url('/svg/header/symbol.svg')"></span>
+          <span class="icon layout--icon icon--button icon--color-yellow click"
+            style="background-image: url('/svg/header/bell.svg')"></span>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="layout">
+        <section class="box analytic__block vertical">
+          <div class="analytic analytic--double analytic--purpule">
+            <span class="icon analytic__button icon--button icon--color-purpule click"
+              style="background-image: url('/svg/analytic/earning.svg')"></span>
+
+            <div class="relative vertical vertical--small">
+              <div class="analytic__title text text--light">$500.00</div>
+              <div class="text text--small text--lighter">Total earning</div>
+
+              <span class="icon analytic__arrow"
+                style="background-image: url('/svg/analytic/purpule-arrow.svg')"></span>
+            </div>
+          </div>
+
+          <div class="analytic analytic--double analytic--blue">
+            <span class="icon analytic__button icon--button icon--color-blue click"
+              style="background-image: url('/svg/analytic/order.svg')"></span>
+
+            <div class="relative vertical vertical--small">
+              <div class="analytic__title text text--light">$961</div>
+              <div class="text text--small text--lighter">Total Order</div>
+            </div>
+          </div>
+
+
+          <div class="analytic analytic--blue analytic--row">
+            <span class="icon analytic__button icon--button icon--color-blue"
+              style="background-image: url('/svg/analytic/earning.svg')"></span>
+            <div class="analytic__container">
+              <div class="text text--light text--semibold text--bold">$203k</div>
+              <div class="text text--lighter">Total Income</div>
+            </div>
+          </div>
+          <div class="analytic analytic--border analytic--row">
+            <span class="icon analytic__button icon--button icon--color-yellow"
+              style="background-image: url('/svg/analytic/income.svg')"></span>
+            <div class="analytic__container">
+              <div class="text text--dark text--semibold text--bold">$203k</div>
+              <div class="text text--gray">Total Income</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="main__double layout">
+        <div class="box main__purchase vertical ">
+          <h2 class="text text--heading "> Purchase list</h2>
+
+          <hr class="divider">
+
+          <div class="purchase__container vertical">
+            <div class="purchase__item vertical">
+              <div class="text">ID437661</div>
+              <div class="text">May 11, 2023, 14:21</div>
+            </div>
+
+            <div class="purchase__item vertical">
+              <div class="text">AirOn ProCam</div>
+              <div class="text">7/8 USB Type-C</div>
+            </div>
+
+            <div class="purchase__item vertical">
+              <div class="text">132.32 EUR</div>
+              <div class="text--warning text">Not paid</div>
+            </div>
+
+            <div class="purchase__item vertical">
+              <div class="text">Customer</div>
+              <div class="text">robin@com.de</div>
+            </div>
+
+          </div>
+
+          <hr class="divider">
+
+          <div class="purchase__container vertical">
+            <div class="purchase__item vertical">
+              <div class="text">ID437661</div>
+              <div class="text">May 11, 2023, 14:21</div>
+            </div>
+
+            <div class="purchase__item vertical">
+              <div class="text">PHILIPS Essential</div>
+              <div class="text">HD9200/90</div>
+            </div>
+
+            <div class="purchase__item vertical">
+              <div class="text">543 USD</div>
+              <div class="text--succes text">Pay by Stripe</div>
+            </div>
+
+            <div class="purchase__item vertical">
+              <div class="text">Customer</div>
+              <div class="text">dima@com.ua</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="main__payment box">
+          <h2 class="text text--heading ">Payment</h2>
+
+          <hr class="divider">
+
+          <div class="form-check">
+            <div>
+              <input type="radio" name="fieldRadio">
+              <label class=" text">
+                Credit card
+              </label>
+            </div>
+            <div>
+              <input type="radio" name="fieldRadio">
+              <label class=" text">
+                Debit card
+              </label>
+            </div>
+            <div>
+              <input type="radio" name="fieldRadio">
+              <label class=" text">
+                PayPal
+              </label>
+            </div>
+
+          </div>
+          <div class="field--grid vertical">
+
+            <div class="relative  field__container">
+              <label class=" text">
+                Name on card
+              </label>
+              <div class="field field--select">
+                <span class="text text--light">
+                  Choose...
+                </span>
+              </div>
+              <select class="field__select">
+                <option value="1">#</option>
+                <option value="2">#</option>
+                <option value="3">#</option>
+                <option value="4">#</option>
+              </select>
+            </div>
+
+            <div class="relative field__container">
+              <label class=" text">
+                Credit card number
+              </label>
+              <div class="field field--select">
+                <span class="text text--light">
+                  Choose...
+                </span>
+              </div>
+              <select class="field__select">
+                <option value="1">#</option>
+                <option value="2">#</option>
+                <option value="3">#</option>
+                <option value="4">#</option>
+              </select>
+            </div>
+
+            <div class="relative  field__container">
+              <label class=" text">
+                Expiration
+              </label>
+              <div class="field field--select">
+                <span class="text text--light">
+                  Choose...
+                </span>
+              </div>
+              <select class="field__select">
+                <option value="1">#</option>
+                <option value="2">#</option>
+                <option value="3">#</option>
+                <option value="4">#</option>
+              </select>
+            </div>
+
+            <div class="relative  field__container">
+              <label class=" text">
+                CVV
+              </label>
+              <div class="field field--select">
+                <label for=""></label>
+                <span class="text text--light">
+                  Choose...
+                </span>
+              </div>
+              <select class="field__select">
+                <option value="1">#</option>
+                <option value="2">#</option>
+                <option value="3">#</option>
+                <option value="4">#</option>
+              </select>
+            </div>
+
+          </div>
+
+          <hr class="divider">
+          <div class="field--grid vertical">
+            <div class="relative  field__container">
+              <label class=" text">
+                Country
+              </label>
+              <div class="field field--select field--space">
+                <span class="text text--dark">
+                  Choose...
+                </span>
+                <span class="icon icon--button field--icon"
+                  style="background-image: url('/svg/field/arrow-down.svg')"></span>
+              </div>
+              <select class="field__select">
+                <option value="1">#</option>
+                <option value="2">#</option>
+                <option value="3">#</option>
+                <option value="4">#</option>
+              </select>
+            </div>
+
+            <div class="relative  field__container">
+              <label class=" text">
+                State
+              </label>
+              <div class="field field--select field--space">
+                <span class="text text--dark">
+                  Choose...
+                </span>
+                <span class="icon icon--button field--icon"
+                  style="background-image: url('/svg/field/arrow-down.svg')"></span>
+              </div>
+              <select class="field__select">
+                <option value="1">#</option>
+                <option value="2">#</option>
+                <option value="3">#</option>
+                <option value="4">#</option>
+              </select>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <div class="form__button">
+            <a href="#" class="nav-button bg--blue-dark text text--light text--center">Continue to checkout</a>
+          </div>
+
+        </div>
+      </section>
+    </main>
   </div>
 
 </body>
